@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+  font-family: 'Arial', sans-serif;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+  padding: 20px;
+  width: 320px;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(71, 255, 255, 0.543);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-image:hover .overlay {
+  opacity: 1;
+}
+
+.overlay img {
+  width: 60px;
+  height: auto;
+}
+
+.card-content {
+  margin-top: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.card-title:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  color: hsl(178, 100%, 50%);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.time-left {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.8rem;
+}
+
+.price-section,
+.time {
+  display: flex;
+  gap: 5px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid #2F415B;
+  padding-top: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid white;
+}
+
+.creator {
+  font-size: 0.9rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.creator a {
+  color: hsl(215, 53%, 87%);
+  font-weight: 400px;
+  text-decoration: none;
+}
+
+.creator a:hover {
+  color: hsl(178, 100%, 50%);
+}
